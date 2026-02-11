@@ -1,0 +1,33 @@
+{
+  "name": "chatnova-backend",
+  "version": "1.0.0",
+  "description": "ChatNova AI Chat Application Backend Server built with Node.js and Express",
+  "author": "Riyaz Ali",
+  "license": "MIT",
+  "main": "index.js",
+  "type": "commonjs",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "build": "echo \"No build step required\"",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "chat",
+    "chatbot",
+    "ai",
+    "express",
+    "node",
+    "backend",
+    "api",
+    "render",
+    "chatnova"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
