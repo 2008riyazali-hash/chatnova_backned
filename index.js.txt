@@ -1,0 +1,28 @@
+const express = require("express");
+const path = require("path");
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware
+app.use(express.json());
+app.use(express.static(path.join(__dirname, "public")));
+
+// Chat API
+app.post("/chat", (req, res) => {
+  const userMessage = req.body.message;
+
+  if (!userMessage) {
+    return res.json({ reply: "No message received." });
+  }
+
+  // Simple test bot: reverse message
+  const reversed = userMessage.split("").reverse().join("");
+
+  res.json({ reply: reversed });
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});  
